@@ -1,7 +1,7 @@
 use anchor_lang::prelude::*;
 
 #[account]
-#[derive(InitSpace)]
+// #[derive(InitSpace)]
 pub struct Listing {
     pub maker: Pubkey,
     pub maker_mint: Pubkey,
@@ -9,6 +9,6 @@ pub struct Listing {
     pub bump: u8,
 }
 
-// impl Space for Listing {
-//     const INIT_SPACE: usize = 8 + 32 + 32 + 8 + 1;
-// }
+impl Space for Listing {
+    const INIT_SPACE: usize = 8 + 32 + 32 + 8 + 1;
+}
