@@ -110,7 +110,6 @@ describe("anchor-marketplace", () => {
       .accountsPartial({
         admin: provider.wallet.publicKey,
         marketplace,
-        rewardMint,
         treasury,
         systemProgram: anchor.web3.SystemProgram.programId,
         tokenProgram: TOKEN_PROGRAM_ID,
